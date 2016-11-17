@@ -1,0 +1,40 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "My first application.",
+  "main": "index.js",
+  "author": "Rafael Henrique Berro",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --content-base app",
+    "test": "standard | snazzy && mocha"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "mocha": "^3.1.2",
+    "node-sass": "^3.13.0",
+    "react": "^15.4.0",
+    "react-addons-perf": "^15.4.1",
+    "react-dom": "^15.4.0",
+    "react-hot-loader": "^1.3.1",
+    "react-redux": "^5.0.2",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "sass-loader": "^4.0.2",
+    "snazzy": "^5.0.0",
+    "standard": "^8.5.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
+}
