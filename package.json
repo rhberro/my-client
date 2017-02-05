@@ -1,13 +1,34 @@
 {
-  "name": "application",
-  "version": "1.0.0",
-  "description": "My first application.",
+  "name": "the-react-client",
+  "version": "0.0.0",
+  "description": "The simplest and the cleanest client template using React.",
   "main": "index.js",
-  "author": "Rafael Henrique Berro",
   "license": "MIT",
+  "author": {
+    "email": "rhberro@gmail.com",
+    "name": "Rafael Henrique Berro",
+    "url": "https://github.com/rhberro"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhberro/the-react-client"
+  },
+  "keywords": [
+    "boilerplate",
+    "build",
+    "example",
+    "react",
+    "reactjs",
+    "template"
+  ],
+  "engines": {
+    "node": ">=7.4.0",
+    "npm": ">=4.0.5"
+  },
   "scripts": {
     "start": "webpack-dev-server --content-base app",
-    "test": "standard | snazzy && mocha"
+    "test": "standard | snazzy && mocha",
+    "build": "webpack -p"
   },
   "devDependencies": {
     "babel-core": "^6.18.2",
