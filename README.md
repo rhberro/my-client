@@ -25,7 +25,7 @@ git clone git@github.com:rhberro/the-react-client.git your-project-name
 
 ## Getting Started
 
-Run yarn to install the project dependencies.
+Run node package manager install command or yarn to install the project dependencies.
 
 ```js
 npm install
