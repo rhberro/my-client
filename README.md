@@ -31,7 +31,7 @@ Run node package manager install command or yarn to install the project dependen
 npm install
 ```
 
-Start serving the application using the node package manager start command.
+Start the application using the node package manager start command.
 
 ```js
 npm start
