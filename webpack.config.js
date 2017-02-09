@@ -25,7 +25,9 @@ const configuration = {
   ],
   devServer: {
     historyApiFallback: true
-  }
+  },
+  devtool: 'sourcemap',
+  cache: true
 }
 
 module.exports = configuration
