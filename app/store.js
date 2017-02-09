@@ -5,7 +5,7 @@ import Task from './reducers/Task'
 export default createStore(
   combineReducers(
     {
-      Task
+      tasks: Task
     }
   )
 )
