@@ -1,8 +1,8 @@
 import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 
-// views.
 import Layout from './views/Layout'
+
 import Home from './views/Home'
 import About from './views/About'
 
