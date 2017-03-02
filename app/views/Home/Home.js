@@ -1,10 +1,12 @@
 import React from 'react'
 
-import List from '../../components/Task/List'
+import './Home.scss'
 
 const Home = () => {
   return (
-    <List />
+    <div className='home'>
+      <h2 className='home__title'>This is the home page.</h2>
+    </div>
   )
 }
 
