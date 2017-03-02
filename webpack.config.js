@@ -5,13 +5,19 @@ const path = require('path')
 
 const configuration = {
   entry: [
-    'webpack-dev-server/client?http://127.0.0.1:8080',
+    'webpack-dev-server/client?http://0.0.0.0:3000',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'app')
   ],
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+    host: '0.0.0.0',
+    port: 3000,
+    historyApiFallback: true
   },
   module: {
     loaders: [
@@ -23,9 +29,6 @@ const configuration = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devServer: {
-    historyApiFallback: true
-  },
   devtool: 'sourcemap',
   cache: true
 }
