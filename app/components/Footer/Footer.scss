@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+}
+
+.footer__container {
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+}
+
+.footer__container--center {
+  justify-content: center;
+}
