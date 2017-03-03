@@ -1,16 +1,19 @@
-* {
-  margin: 0rem;
-  padding: 0rem;
+.layout {
+  display: flex;
+  justify-content: center;
 }
 
-body {
-  font-family: 'Helvetica', sans-serif;
+.layout__container {
+  max-width: 800px;
+  width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, a, p, span {
-  color: #324057;
+.layout__row {
+  display: flex;
+  flex: 1;
+  clear: both;
 }
 
-a {
-  text-decoration: none;
+.layout__column {
+  flex: 1;
 }

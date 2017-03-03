@@ -1,25 +1,18 @@
-
-nav {
-  background-color: #E5E9F2;
+.nav {
   display: flex;
 }
 
-.nav {
-  align-items: center;
+.nav__container {
   display: flex;
   flex: 1;
 }
 
-.nav--left {
+.nav__container--left {
   justify-content: flex-start;
 }
 
-.nav--right {
+.nav__container--right {
   justify-content: flex-end;
-}
-
-.nav__item {
-  list-style: none;
 }
 
 .nav__anchor {
@@ -28,7 +21,5 @@ nav {
 }
 
 .nav__anchor--active {
-  background-color: #D3DCE6;
+  font-weight: 700;
 }
-
-
