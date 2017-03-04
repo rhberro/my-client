@@ -29,7 +29,7 @@
     "npm": ">=4.0.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --content-base app",
+    "start": "webpack-dev-server",
     "test": "standard | snazzy && mocha",
     "build": "webpack -p"
   },
