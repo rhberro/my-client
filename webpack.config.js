@@ -5,7 +5,7 @@ const path = require('path')
 
 const configuration = {
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:3000',
+    'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'app')
   ],
@@ -15,8 +15,6 @@ const configuration = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
-    host: '0.0.0.0',
-    port: 3000,
     historyApiFallback: true
   },
   module: {
@@ -29,7 +27,7 @@ const configuration = {
   plugins: [
     new webpack.HotModuleReplacementPlugin()
   ],
-  devtool: 'sourcemap',
+  devtool: 'source-map',
   cache: true
 }
 
