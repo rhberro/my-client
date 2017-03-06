@@ -10,14 +10,9 @@ const Layout = props => {
 
   return (
     <div className='layout'>
-      <div className='layout__container'>
-        <div className='layout__row'>
-          <div className='layout__column'>
-            <Navbar />
-            <Footer />
-          </div>
-        </div>
-      </div>
+      <Navbar />
+      { children }
+      <Footer />
     </div>
   )
 }
