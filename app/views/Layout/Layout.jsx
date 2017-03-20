@@ -7,9 +7,10 @@ import './Layout.scss'
 
 const Layout = props => (
   <div className='layout'>
-    <Navbar />
-    { props.children }
-    <Footer />
+    <div className='layout__container'>
+      <Navbar />{ props.children }
+      <Footer />
+    </div>
   </div>
 )
 
