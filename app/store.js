@@ -1,11 +1,11 @@
 import { createStore, combineReducers } from 'redux'
 
-import Task from './reducers/Task'
+import Tasks from './reducers/Tasks'
 
 export default createStore(
   combineReducers(
     {
-      tasks: Task
+      tasks: Tasks
     }
   )
 )
