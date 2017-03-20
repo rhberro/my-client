@@ -4,9 +4,13 @@ import './Footer.scss'
 
 const Footer = () => (
   <footer className='footer'>
-    <a className='footer__anchor' href='https://github.com/rhberro/the-react-client'>
-      Github
-    </a>
+    <ul className='footer__container footer__container--center'>
+      <li className='footer__item'>
+        <a className='footer__anchor' href='https://github.com/rhberro/the-react-client'>
+          Github
+        </a>
+      </li>
+    </ul>
   </footer>
 )
 
