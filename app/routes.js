@@ -2,15 +2,16 @@ import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 
 import Layout from './views/Layout'
-
 import Home from './views/Home'
 import About from './views/About'
+import Contact from './views/Contact'
 
 const Routes = () => (
   <Router history={browserHistory}>
     <Route component={Layout}>
       <Route name='home' path='/' component={Home} />
       <Route name='about' path='/about' component={About} />
+      <Route path='contact' component={Contact} />
     </Route>
   </Router>
 )
