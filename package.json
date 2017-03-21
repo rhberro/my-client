@@ -60,5 +60,8 @@
       "describe",
       "it"
     ]
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
