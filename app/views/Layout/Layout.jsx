@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Navbar from '../../components/Navbar'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 
 import './Layout.scss'
@@ -8,7 +8,7 @@ import './Layout.scss'
 const Layout = props => (
   <div className='layout'>
     <div className='layout__container'>
-      <Navbar />{ props.children }
+      <Header />{ props.children }
       <Footer />
     </div>
   </div>
