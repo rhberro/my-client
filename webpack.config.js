@@ -5,7 +5,7 @@ const path = require('path')
 
 const configuration = {
   entry: [
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://0.0.0.0:8080',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'app')
   ],
@@ -15,7 +15,9 @@ const configuration = {
   },
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
-    historyApiFallback: true
+    historyApiFallback: true,
+    host: "0.0.0.0",
+    post: "8080"
   },
   module: {
     loaders: [
