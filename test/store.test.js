@@ -12,8 +12,8 @@ describe( 'the state tree', () => {
 describe( 'the state tasks', () => {
   it( 'should match', () => {
     const currentState = store.getState().tasks
-    const desiredStates = { payload: [], fetching: false, success: false, error: false }
-    expect( currentState ).toMatchObject( desiredStates )
+    const desiredState = { payload: [], fetching: false, success: false, error: false }
+    expect( currentState ).toMatchObject( desiredState )
   } )
 } )
 /* eslint-enable */
