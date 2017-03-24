@@ -17,7 +17,7 @@ const configuration = {
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
     host: "0.0.0.0",
-    post: "8080"
+    port: "8080"
   },
   module: {
     loaders: [
