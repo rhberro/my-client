@@ -2,7 +2,6 @@
 
 [![Build Status](https://travis-ci.org/rhberro/the-react-client.svg?branch=master)](https://travis-ci.org/rhberro/the-react-client)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
-[![Coverage Status](https://coveralls.io/repos/github/rhberro/the-react-client/badge.svg?branch=master)](https://coveralls.io/github/rhberro/the-react-client?branch=master)
 
 The simplest and the cleanest client template using React.
 
