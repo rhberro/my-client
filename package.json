@@ -30,7 +30,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "standard --verbose | snazzy && jest",
+    "test": "standard | snazzy && jest",
     "build": "standard --fix && webpack -p"
   },
   "dependencies": {
