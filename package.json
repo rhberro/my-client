@@ -33,6 +33,7 @@
     "build": "standard --fix && webpack -p"
   },
   "dependencies": {
+    "prop-types": "^15.5.4",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
     "react-redux": "^5.0.2",
