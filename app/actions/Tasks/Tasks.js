@@ -10,7 +10,7 @@ export const tasksFailure = () => (
   }
 )
 
-export const tasksSuccess = (payload) => (
+export const tasksSuccess = payload => (
   {
     type: 'TASKS_SUCCESS',
     payload
