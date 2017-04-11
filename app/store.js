@@ -1,4 +1,4 @@
-import { createStore, combineReducers } from 'redux'
+import { applyMiddleware, combineReducers, createStore } from 'redux'
 
 import Tasks from './reducers/Tasks'
 
@@ -7,5 +7,8 @@ export default createStore(
     {
       tasks: Tasks
     }
+  ),
+  applyMiddleware(
+
   )
 )
