@@ -4,14 +4,14 @@ import store from '../app/store'
 describe( 'the state tree', () => {
   it( 'should match', () => {
     const currentStates = store.getState()
-    const desiredStates = { tasks : {} }
+    const desiredStates = { commits : {} }
     expect( currentStates ).toMatchObject( desiredStates )
   } )
 } )
 
-describe( 'the state tasks', () => {
+describe( 'the state commits', () => {
   it( 'should match', () => {
-    const currentState = store.getState().tasks
+    const currentState = store.getState().commits
     const desiredState = { payload: [], fetching: false, success: false, error: false }
     expect( currentState ).toMatchObject( desiredState )
   } )

@@ -1,12 +1,12 @@
 const INITIAL = { payload: [], error: false, fetching: false, success: false }
 
-export default function Tasks (state = INITIAL, action) {
+export default function Commits (state = INITIAL, action) {
   switch (action.type) {
-    case 'TASKS':
+    case 'COMMITS':
       return Object.assign({}, INITIAL, { fetching: true })
-    case 'TASKS_FAILURE':
+    case 'COMMITS_FAILURE':
       return Object.assign({}, INITIAL, { error: true })
-    case 'TASKS_SUCCESS':
+    case 'COMMITS_SUCCESS':
       return Object.assign({}, INITIAL, { success: true, payload: action.payload })
     default:
       return state

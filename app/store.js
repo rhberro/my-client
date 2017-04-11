@@ -1,11 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 
-import Tasks from './reducers/Tasks'
+import Commits from './reducers/Commits'
 
 export default createStore(
   combineReducers(
     {
-      tasks: Tasks
+      commits: Commits
     }
   ),
   applyMiddleware(

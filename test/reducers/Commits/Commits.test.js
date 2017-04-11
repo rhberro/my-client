@@ -1,28 +1,28 @@
-import Tasks from '../../../app/reducers/Tasks'
-import * as Actions from '../../../app/actions/Tasks'
+import Commits from '../../../app/reducers/Commits'
+import * as Actions from '../../../app/actions/Commits'
 
 /* eslint-disable */
-describe( 'tasks reducer', () => {
+describe( 'commits reducer', () => {
   it( 'should return the initial state', () => {
-    const currentState = Tasks( undefined, {} )
+    const currentState = Commits( undefined, {} )
     const desiredState = { payload: [], error: false, fetching: false, success: false }
     expect( currentState ).toMatchObject( desiredState )
   } )
 
-  it( 'should handle the action tasks', () => {
-    const currentState = Tasks( undefined, Actions.tasks() )
+  it( 'should handle the action commits', () => {
+    const currentState = Commits( undefined, Actions.commits() )
     const desiredState = { payload: [], error: false, fetching: true, success: false }
     expect( currentState ).toMatchObject( desiredState )
   } )
 
-  it( 'should handle the action tasks_failure', () => {
-    const currentState = Tasks( undefined, Actions.tasksFailure() )
+  it( 'should handle the action commits_failure', () => {
+    const currentState = Commits( undefined, Actions.commitsFailure() )
     const desiredState = { payload: [], error: true, fetching: false, success: false }
     expect( currentState ).toMatchObject( desiredState )
   } )
 
-  it( 'should handle the action tasks_success', () => {
-    const currentState = Tasks( undefined, Actions.tasksSuccess( [] ) )
+  it( 'should handle the action commits_success', () => {
+    const currentState = Commits( undefined, Actions.commitsSuccess( [] ) )
     const desiredState = { payload: [], error: false, fetching: false, success: true }
     expect( currentState ).toMatchObject( desiredState )
   } )
