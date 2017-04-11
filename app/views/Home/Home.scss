@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.home__title,
+.home__description {
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+
 .home__title {
-  font-size: 3rem;
+  font-size: 3.5rem;
+}
+
+.home__description {
+  font-size: 1.5rem;
 }

@@ -4,7 +4,10 @@ import './Home.scss'
 
 const Home = () => (
   <div className='home'>
-    <h2 className='home__title'>This is the home page.</h2>
+    <h1 className='home__title'>The React Client</h1>
+    <p className='home__description'>
+      The simplest and the cleanest client boilerplate using React.
+    </p>
   </div>
 )
 
