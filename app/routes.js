@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { browserHistory, IndexRoute, Router, Route } from 'react-router'
 
 import Layout from './views/Layout'
 import Home from './views/Home'
