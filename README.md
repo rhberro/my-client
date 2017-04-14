@@ -38,7 +38,7 @@ npm start
 
 ## Contributing
 
-The contribution guide is not available for now.
+The contribution guide is not available for now but I am accepting any contribution if under the standard style.
 
 ## License
 
