@@ -1,18 +1,29 @@
-export const commits = () => (
+const fetch = () => (
   {
-    type: 'COMMITS'
+    type: 'FETCH_COMMITS_REQUEST'
   }
 )
 
-export const commitsFailure = () => (
+const failed = message => (
   {
-    type: 'COMMITS_FAILURE'
+    type: 'FETCH_COMMITS_REQUEST_FAILED',
+    message
   }
 )
 
-export const commitsSuccess = payload => (
+const succeed = payload => (
   {
-    type: 'COMMITS_SUCCESS',
+    type: 'FETCH_COMMITS_REQUEST_SUCCEED',
     payload
   }
 )
+
+export function getCommits () {
+  return dispatch => {
+    dispatch(fetch())
+
+    window.fetch('https://api.github.com/repos/rhberro/the-react-client/commits')
+      .then(data => dispatch(succeed(data)))
+      .catch(error => dispatch(failed(error)))
+  }
+}
