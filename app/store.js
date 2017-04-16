@@ -1,15 +1,23 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-import Commits from './reducers/Commits'
+import User from './reducers/User'
 
 export default createStore(
   combineReducers(
     {
-      commits: Commits
+      /**
+       * Here you should define the store
+       * properties and their reducers.
+       */
+      user: User
     }
   ),
   applyMiddleware(
+    /**
+     * Here you can apply any middlewares you
+     * want to the store.
+     */
     thunkMiddleware
   )
 )

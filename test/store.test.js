@@ -4,15 +4,15 @@ import store from '../app/store'
 describe( 'the state tree', () => {
   it( 'should match', () => {
     const currentStates = store.getState()
-    const desiredStates = { commits : {} }
+    const desiredStates = { user : {} }
     expect( currentStates ).toMatchObject( desiredStates )
   } )
 } )
 
-describe( 'the state commits', () => {
+describe( 'the state user', () => {
   it( 'should match', () => {
-    const currentState = store.getState().commits
-    const desiredState = { payload: [], fetching: false, success: false, error: false }
+    const currentState = store.getState().user
+    const desiredState = { payload: [], fetching: false, success: false, error: null }
     expect( currentState ).toMatchObject( desiredState )
   } )
 } )
