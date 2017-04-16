@@ -1,4 +1,4 @@
-const fetch = () => (
+const request = () => (
   {
     type: 'FETCH_COMMITS_REQUEST'
   }
@@ -20,9 +20,10 @@ const succeed = payload => (
 
 export function getCommits () {
   return dispatch => {
-    dispatch(fetch())
+    dispatch(request())
 
     window.fetch('https://api.github.com/repos/rhberro/the-react-client/commits')
+      .then(data => data.json())
       .then(data => dispatch(succeed(data)))
       .catch(error => dispatch(failed(error)))
   }
