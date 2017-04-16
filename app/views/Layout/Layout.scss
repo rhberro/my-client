@@ -7,12 +7,18 @@
   padding: 0px;
 }
 
-html, body, #root {
+h1, h2, h3, p {
+  color: #555;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.layout,
+.layout__container {
   height: 100vh;
 }
 
-#root {
+.layout__container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
