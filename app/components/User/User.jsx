@@ -6,10 +6,6 @@ import { getUser } from '../../actions/User'
 
 class User extends React.Component {
   componentWillMount () {
-    this._getUser()
-  }
-
-  _getUser () {
     const { getUser } = this.props
     getUser()
   }
@@ -27,7 +23,6 @@ class User extends React.Component {
   }
 
   _renderSuccess () {
-    // return <div>{ this.props.user.payload.login }</div>
     return <div>Status: Success</div>
   }
 
