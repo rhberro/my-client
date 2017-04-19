@@ -28,9 +28,10 @@
     "npm": ">=4.0.5"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "standard | snazzy && jest",
-    "build": "standard --fix && webpack -p"
+    "postinstall": "yarn build",
+    "start": "webpack-dev-server --config webpack.development.config.js",
+    "build": "webpack --config webpack.production.config.js",
+    "test": "standard | snazzy && jest"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
@@ -47,6 +48,7 @@
     "babel-preset-env": "^1.3.3",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.24.1",
+    "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.0",
     "jest": "^19.0.2",
     "node-sass": "^4.5.0",
@@ -62,6 +64,9 @@
     "globals": [
       "describe",
       "it"
+    ],
+    "ignore": [
+      "public/"
     ]
   },
   "jest": {
