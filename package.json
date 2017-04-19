@@ -28,6 +28,7 @@
     "npm": ">=4.0.5"
   },
   "scripts": {
+    "heroku-postbuild": "yarn build",
     "start": "webpack-dev-server --config webpack.development.config.js",
     "build": "webpack --config webpack.production.config.js",
     "test": "standard | snazzy && jest"
