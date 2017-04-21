@@ -1,5 +1,5 @@
 {
   "name": "User",
-  "main": "./User.jsx",
+  "main": "./User.js",
   "private": true
 }
