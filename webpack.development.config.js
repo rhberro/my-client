@@ -17,9 +17,19 @@ const configuration = {
   },
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ] },
-      { test: /\.html$/, loaders: [ 'html-loader' ] }
+      {
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        loaders: [ 'html-loader' ]
+      },
+      {
+        test: /\.scss$/,
+        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+      }
     ]
   },
   plugins: [
@@ -40,15 +50,7 @@ const configuration = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin()
   ],
-  devtool: 'eval',
-  cache: false,
-  devServer: {
-    contentBase: path.resolve(__dirname, 'public'),
-    historyApiFallback: true,
-    host: '0.0.0.0',
-    port: '8080',
-    hot: true
-  }
+  devtool: 'eval-cheap-module-source-map'
 }
 
 module.exports = configuration
