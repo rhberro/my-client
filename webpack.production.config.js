@@ -4,6 +4,8 @@ const webpack = require('webpack')
 const path = require('path')
 
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var CompressionPlugin = require('compression-webpack-plugin')
 
 const configuration = {
   entry: [
@@ -15,9 +17,24 @@ const configuration = {
   },
   module: {
     loaders: [
-      { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/, loaders: [ 'style-loader', 'css-loader', 'sass-loader' ] },
-      { test: /\.html$/, loaders: [ 'html-loader' ] }
+      {
+        test: /\.js?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.html$/,
+        loaders: [ 'html-loader' ]
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract(
+          {
+            fallback: 'style-loader',
+            use: [ 'css-loader', 'sass-loader' ]
+          }
+        )
+      }
     ]
   },
   plugins: [
@@ -34,11 +51,24 @@ const configuration = {
         minify: {}
       }
     ),
+    new webpack.optimize.UglifyJsPlugin(
+      {
+        compress: {
+          warnings: false
+        },
+        comments: false
+      }
+    ),
+    new ExtractTextPlugin('[hash].css'),
+    new CompressionPlugin(
+      {
+        test: /\.js$|\.css$|\.html$/
+      }
+    ),
     new webpack.optimize.AggressiveMergingPlugin(),
     new webpack.optimize.OccurrenceOrderPlugin()
   ],
-  devtool: 'cheap-source-map',
-  cache: true
+  devtool: 'cheap-module-source-map'
 }
 
 module.exports = configuration
