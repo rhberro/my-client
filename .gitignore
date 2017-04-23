@@ -1,6 +1,4 @@
 node_modules/
-public/bundle.js
-public/bundle.js.gz
-public/bundle.js.map
+public/build/
 npm-debug.log
 yarn-error.log
