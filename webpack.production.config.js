@@ -53,6 +53,7 @@ const configuration = {
     ),
     new webpack.optimize.UglifyJsPlugin(
       {
+        sourceMap: true,
         compress: {
           warnings: false
         },
