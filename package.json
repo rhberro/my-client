@@ -65,10 +65,6 @@
     "webpack-dev-server": "^2.4.2"
   },
   "standard": {
-    "globals": [
-      "describe",
-      "it"
-    ],
     "ignore": [
       "public/"
     ]
