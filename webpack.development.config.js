@@ -15,6 +15,13 @@ const configuration = {
     path: path.resolve(__dirname, 'public/build/'),
     filename: '[name].js'
   },
+  resolve: {
+    extensions: [ '.js', '.jsx', '.json', '.scss', '.css' ],
+    alias: {
+      components: path.resolve(__dirname, 'app/components'),
+      views: path.resolve(__dirname, 'app/views')
+    }
+  },
   module: {
     loaders: [
       {
