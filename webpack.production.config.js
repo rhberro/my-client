@@ -16,8 +16,10 @@ const configuration = {
     filename: '[hash].js'
   },
   resolve: {
-    extensions: [ '.js', '.jsx', '.json', '.scss', '.css' ],
+    extensions: [ '.js', '.jsx' ],
     alias: {
+      actions: path.resolve(__dirname, 'app/actions'),
+      reducers: path.resolve(__dirname, 'app/reducers'),
       components: path.resolve(__dirname, 'app/components'),
       views: path.resolve(__dirname, 'app/views')
     }
