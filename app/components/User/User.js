@@ -2,7 +2,7 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { getUser } from '../../actions/User'
+import { getUser } from 'actions/User'
 
 class User extends React.Component {
   componentWillMount () {
