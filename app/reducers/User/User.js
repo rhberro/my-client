@@ -1,7 +1,3 @@
-/**
- * This is the initial state of the user property
- * in the application state tree.
- */
 const initial = {
   error: null,
   fetching: false,
