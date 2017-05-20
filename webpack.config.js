@@ -15,15 +15,6 @@ const configuration = {
     path: path.resolve(__dirname, 'public/build/'),
     filename: '[name].js'
   },
-  resolve: {
-    extensions: [ '.js', '.jsx' ],
-    alias: {
-      actions: path.resolve(__dirname, 'app/actions'),
-      reducers: path.resolve(__dirname, 'app/reducers'),
-      components: path.resolve(__dirname, 'app/components'),
-      views: path.resolve(__dirname, 'app/views')
-    }
-  },
   module: {
     loaders: [
       {
