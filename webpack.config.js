@@ -50,7 +50,12 @@ const configuration = {
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.NamedModulesPlugin()
   ],
-  devtool: 'eval-cheap-module-source-map'
+  devtool: 'eval-cheap-module-source-map',
+  devServer: {
+    contentBase: path.resolve(__dirname, 'public'),
+    historyApiFallback: true,
+    hot: true
+  }
 }
 
 module.exports = configuration
