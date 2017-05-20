@@ -1,16 +1,17 @@
 const express = require('express')
 const path = require('path')
+const gzip = require('connect-gzip-static')
 const app = express()
 
 app.use(
-  express.static(
+  gzip(
     path.join(__dirname, '/public/build/')
   )
 )
 
 app.get(
-  '*', (req, res) => {
-    res.sendFile(
+  '*', (request, response) => {
+    response.sendFile(
       path.join(__dirname, '/public/build/index.html')
     )
   }
