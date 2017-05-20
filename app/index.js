@@ -15,12 +15,11 @@ ReactDOM.render(
 if (module.hot) {
   module.hot.accept('./routes', () => {
     const NextRoutes = require('./routes').default
-
     ReactDOM.render(
       <Provider store={Store}>
         <NextRoutes />
       </Provider>,
-      document.getElementById('root')
+      document.getElementById('application')
     )
   })
 }
