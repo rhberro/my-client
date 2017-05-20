@@ -1,6 +1,6 @@
 {
   "name": "the-react-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The simplest and the cleanest client boilerplate using React.",
   "main": "index.js",
   "license": "MIT",
