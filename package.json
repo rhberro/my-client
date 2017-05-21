@@ -28,7 +28,6 @@
     "npm": ">=4.0.5"
   },
   "scripts": {
-    "heroku-postbuild": "npm run build",
     "start": "webpack-dev-server -d",
     "prebuild": "rimraf public/build/",
     "build": "webpack --config webpack.production.config.js -p",
