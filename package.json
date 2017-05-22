@@ -1,6 +1,6 @@
 {
   "name": "the-react-client",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "The simplest and the cleanest client boilerplate using React.",
   "main": "index.js",
   "license": "MIT",
@@ -28,7 +28,6 @@
     "npm": ">=4.0.5"
   },
   "scripts": {
-    "heroku-postbuild": "npm run build",
     "start": "webpack-dev-server -d",
     "prebuild": "rimraf public/build/",
     "build": "webpack --config webpack.production.config.js -p",
