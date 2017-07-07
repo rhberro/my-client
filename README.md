@@ -30,11 +30,12 @@ Run node package manager install command or yarn to install the project dependen
 npm install
 ```
 
-Start the application using the node package manager start command. You can also check [the-react-commander](https://github.com/rhberro/the-react-commander) package.
+Start the application using the node package manager start command.
 
 ```js
 npm start
 ```
+You can also check [the-react-commander](https://github.com/rhberro/the-react-commander) package.
 
 ## Contributing
 
