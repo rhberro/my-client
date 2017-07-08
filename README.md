@@ -35,7 +35,7 @@ Start the application using the node package manager start command.
 ```js
 npm start
 ```
-You can also check [the-react-commander](https://github.com/rhberro/the-react-commander) package.
+You can also check the [the-react-commander](https://github.com/rhberro/the-react-commander) package, a set of commands to help you generate from views to components.
 
 ## Contributing
 
