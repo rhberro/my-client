@@ -35,7 +35,7 @@ Start the application using the node package manager start command.
 ```js
 npm start
 ```
-You can also check the [the-react-commander](https://github.com/rhberro/the-react-commander) package, a set of commands to  generate from views to components directly from your command line interface.
+You can also check the [the-react-commander](https://github.com/rhberro/the-react-commander) package, a set of commands to  generate from views to components directly from your command line interface. If you want to use Vue check out [this repository](https://github.com/rhberro/the-vue-client).
 
 ## Contributing
 
