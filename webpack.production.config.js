@@ -13,6 +13,7 @@ const configuration = {
   ],
   output: {
     path: path.resolve(__dirname, 'public/build/'),
+    publicPath: '/',
     filename: '[hash].js'
   },
   module: {
