@@ -1,5 +1,5 @@
 {
-  "name": "User",
-  "main": "./User.js",
+  "name": "UserContainer",
+  "main": "./UserContainer.js",
   "private": true
 }
