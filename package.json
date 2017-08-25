@@ -24,8 +24,8 @@
     "reactjs"
   ],
   "engines": {
-    "node": ">=7.4.0",
-    "npm": ">=4.0.5"
+    "node": ">=8.4.0",
+    "npm": ">=5.3.0"
   },
   "scripts": {
     "start": "webpack-dev-server -d",
