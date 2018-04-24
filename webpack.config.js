@@ -1,13 +1,11 @@
-'use strict'
-
 const webpack = require('webpack')
 const path = require('path')
 
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const configuration = {
+module.exports = {
   entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080',
+    'webpack-dev-server/client?http://0.0.0.0:3030',
     'webpack/hot/only-dev-server',
     path.resolve(__dirname, 'app')
   ],
@@ -17,28 +15,27 @@ const configuration = {
     filename: '[name].js'
   },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /\.js?$/,
+        test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.html$/,
-        loaders: [ 'html-loader' ]
+        loader: 'html-loader'
       },
       {
-        test: /\.scss$/,
-        loaders: [ 'style-loader', 'css-loader', 'sass-loader' ]
+        test: /\.styl$/,
+        loader: 'style-loader!css-loader!stylus-loader'
+      },
+      {
+        test: /\.svg$/,
+        loader: 'raw-loader'
       }
     ]
   },
   plugins: [
-    new webpack.DefinePlugin(
-      {
-        'process.env.NODE_ENV': JSON.stringify('development')
-      }
-    ),
     new HtmlWebpackPlugin(
       {
         template: path.resolve(__dirname, 'public/index.html'),
@@ -55,8 +52,9 @@ const configuration = {
   devServer: {
     contentBase: path.resolve(__dirname, 'public'),
     historyApiFallback: true,
-    hot: true
+    hot: true,
+    open: true,
+    port: 3030,
+    stats: 'minimal'
   }
 }
-
-module.exports = configuration

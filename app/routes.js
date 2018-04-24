@@ -1,15 +1,18 @@
+import { Route, Switch } from 'react-router-dom'
 import React from 'react'
-import { browserHistory, IndexRoute, Router, Route } from 'react-router'
 
-import Layout from './views/Layout'
-import Home from './views/Home'
+import About from './components/views/About'
+import Home from './components/views/Home'
+import NotFound from './components/views/NotFound'
 
-const Routes = () => (
-  <Router history={browserHistory}>
-    <Route path='/' component={Layout}>
-      <IndexRoute component={Home} />
-    </Route>
-  </Router>
-)
+function Routes () {
+  return (
+    <Switch>
+      <Route exact path='/' component={Home} />
+      <Route exact path='/about' component={About} />
+      <Route component={NotFound} />
+    </Switch>
+  )
+}
 
 export default Routes

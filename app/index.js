@@ -1,25 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
 
-import Routes from './routes'
-import Store from './store'
+import RouterProvider from './components/provider/RouterProvider'
+import StoreProvider from './components/provider/StoreProvider'
 
 ReactDOM.render(
-  <Provider store={Store}>
-    <Routes />
-  </Provider>,
+  <StoreProvider>
+    <RouterProvider />
+  </StoreProvider>,
   document.getElementById('application')
 )
-
-if (module.hot) {
-  module.hot.accept('./routes', () => {
-    const NextRoutes = require('./routes').default
-    ReactDOM.render(
-      <Provider store={Store}>
-        <NextRoutes />
-      </Provider>,
-      document.getElementById('application')
-    )
-  })
-}

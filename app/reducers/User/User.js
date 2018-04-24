@@ -1,7 +1,7 @@
 const initial = {
   error: null,
   fetching: false,
-  payload: [],
+  payload: null,
   success: false
 }
 

@@ -1,22 +1,14 @@
-export const request = () => (
-  {
-    type: 'FETCH_USER_REQUEST'
-  }
-)
+export const request = function () {
+  return { type: 'FETCH_USER_REQUEST' }
+}
 
-export const failed = error => (
-  {
-    type: 'FETCH_USER_REQUEST_FAILED',
-    error
-  }
-)
+export const succeed = function (payload) {
+  return { type: 'FETCH_USER_REQUEST_SUCCEED', payload }
+}
 
-export const succeed = payload => (
-  {
-    type: 'FETCH_USER_REQUEST_SUCCEED',
-    payload
-  }
-)
+export const failed = function (error) {
+  return { type: 'FETCH_USER_REQUEST_FAILED', error }
+}
 
 export function getUser () {
   return dispatch => {
